@@ -18,7 +18,7 @@
 /* §4.3 Two-column layout */
 .columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 64px;
   align-items: stretch;
 }

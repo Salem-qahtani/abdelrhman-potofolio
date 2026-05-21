@@ -17,6 +17,7 @@ body {
   line-height: 1.55;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 ::selection {
@@ -28,4 +29,51 @@ body {
   outline: none;
   box-shadow: var(--shadow-focus);
   border-radius: var(--radius-xs);
+}
+
+/*
+ * Custom scrollbar — designed to feel like a UI element of the page.
+ *  - Track 12px wide, painted in the page background so the rail blends in.
+ *  - Thumb in the accent color with a 3px transparent border (via background-clip)
+ *    so the visible thumb is ~6px, floating with breathing room from the edge.
+ *  - Arrows fully removed.
+ *  - body { overflow-y: scroll } keeps the rail present even when content fits,
+ *    so the layout doesn't shift between pages/states.
+ */
+html {
+  scrollbar-width: normal;
+}
+
+::-webkit-scrollbar {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: var(--bg-page);
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-primary);
+  border-radius: 10px;
+  border: 21px solid var(--bg-page);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-page);
+}
+
+/* Invisible top/bottom spacers — the thumb can't slide into these areas, so
+   it never reaches the page edges. Painted in --bg-page so they're invisible. */
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+  height: 20px;
+  background-color: var(--bg-page);
+  background-image: none;
+  border: none;
 }
