@@ -1,0 +1,43 @@
+/* §5 Tools section */
+.section {
+  position: relative;
+  z-index: var(--z-content);
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  margin-bottom: 64px;
+}
+
+/* §5.3 Auto-fit grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1023px) {
+  .heading {
+    margin-bottom: 48px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading {
+    margin-bottom: 40px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+}

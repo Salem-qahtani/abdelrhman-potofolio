@@ -1,0 +1,40 @@
+/* §2.3 Tooltip */
+.tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, 4px);
+  background: #202020;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-tooltip);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  z-index: var(--z-tooltip);
+  transition:
+    opacity 100ms var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.tooltip.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition:
+    opacity var(--duration-fast) var(--ease-out) 80ms,
+    transform var(--duration-fast) var(--ease-out) 80ms;
+}
+
+/* Hide tooltips on touch devices */
+@media (hover: none) {
+  .tooltip {
+    display: none;
+  }
+}

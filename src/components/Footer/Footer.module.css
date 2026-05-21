@@ -1,0 +1,77 @@
+/* §6 Footer / contact */
+.section {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--bg-page);
+  padding-top: 120px;
+  padding-bottom: 64px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* §6.3 Email */
+.email {
+  font-family: var(--font-display);
+  font-size: var(--text-email);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+  word-break: break-word;
+  margin-bottom: 40px;
+}
+
+.email:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.email:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-xs);
+}
+
+/* §6.4 Credit */
+.credit {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--text-tertiary);
+  margin-top: 32px;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding-top: 96px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+}

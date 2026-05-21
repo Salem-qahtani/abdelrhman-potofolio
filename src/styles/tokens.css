@@ -1,0 +1,146 @@
+/*
+ * Design tokens — sourced verbatim from Portfolio Design System.md §1.
+ * Components MUST reference var(--token) and never hard-code raw values.
+ */
+
+:root {
+  /* §1.1 Backgrounds */
+  --bg-page: #0e0e0e;
+  --bg-elevated: #161616;
+  --bg-elevated-2: #1c1c1c;
+  --bg-card-light: #ffffff;
+  --bg-overlay-dim: rgba(0, 0, 0, 0.55);
+  --bg-glass: rgba(22, 22, 22, 0.55);
+
+  /* §1.1 Text on dark */
+  --text-primary: #f5f5f5;
+  --text-secondary: #a8a8a8;
+  --text-tertiary: #6e6e6e;
+  --text-muted: #3a3a3a;
+  --text-disabled: #2a2a2a;
+
+  /* §1.1 Text on light (profile card only) */
+  --text-on-light-primary: #0e0e0e;
+  --text-on-light-secondary: #5a5a5a;
+
+  /* §1.1 Accents */
+  --accent-primary: #ff6a1a;
+  --accent-primary-hover: #ff8340;
+  --accent-primary-soft: rgba(255, 106, 26, 0.12);
+
+  /* §1.1 Borders & dividers */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --border-divider: rgba(255, 255, 255, 0.04);
+
+  /* §1.1 Particles */
+  --particle-color: rgba(255, 255, 255, 0.55);
+
+  /* §1.2 Font families */
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* §1.2 Type scale — desktop defaults */
+  --text-display: 120px;
+  --text-h1: 56px;
+  --text-h2: 28px;
+  --text-h3: 26px;
+  --text-h4: 18px;
+  --text-body-lg: 18px;
+  --text-body: 15px;
+  --text-body-sm: 14px;
+  --text-email: 48px;
+  --text-label: 14px;
+  --text-caption: 12px;
+  --text-tooltip: 12px;
+  --text-button: 14px;
+
+  /* §1.3 Spacing — 4px base */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-40: 160px;
+
+  /* §1.4 Border radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+
+  /* §1.5 Shadows */
+  --shadow-none: none;
+  --shadow-navbar: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 24px 48px -16px rgba(0, 0, 0, 0.55), 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(255, 106, 26, 0.35);
+
+  /* §1.6 Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-slow: 420ms;
+  --duration-reveal: 700ms;
+
+  /* §1.7 Layout */
+  --container-max: 1240px;
+  --container-pad: 48px;
+
+  /* Derived section padding (used by every <section>) */
+  --section-pad-y: 128px;
+
+  /* §1.9 Z-index */
+  --z-particles: 0;
+  --z-content: 10;
+  --z-navbar: 100;
+  --z-tooltip: 110;
+  --z-overlay: 200;
+}
+
+/* §1.8 Tablet (640–1023px) — type, padding, section padding overrides */
+@media (max-width: 1023px) {
+  :root {
+    --text-display: 88px;
+    --text-h1: 44px;
+    --text-h2: 24px;
+    --text-h3: 24px;
+    --text-h4: 17px;
+    --text-body-lg: 17px;
+    --text-email: 40px;
+    --container-pad: 32px;
+    --section-pad-y: 96px;
+  }
+}
+
+/* §1.8 Mobile (0–639px) */
+@media (max-width: 639px) {
+  :root {
+    --text-display: 56px;
+    --text-h1: 36px;
+    --text-h2: 22px;
+    --text-h3: 22px;
+    --text-h4: 16px;
+    --text-body-lg: 16px;
+    --text-body: 14px;
+    --text-body-sm: 13px;
+    --text-email: 28px;
+    --text-label: 13px;
+    --text-caption: 11px;
+    --container-pad: 20px;
+    --section-pad-y: 80px;
+  }
+}

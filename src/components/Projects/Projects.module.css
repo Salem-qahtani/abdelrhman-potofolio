@@ -1,0 +1,62 @@
+/* §4 Projects section */
+.section {
+  position: relative;
+  z-index: var(--z-content);
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  margin-bottom: 64px;
+}
+
+/* §4.3 Two-column layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* §4.7 View All wrapper */
+.viewAll {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+@media (max-width: 1023px) {
+  .heading {
+    margin-bottom: 48px;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .viewAll {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading {
+    margin-bottom: 40px;
+  }
+  .columns {
+    gap: 40px;
+  }
+  .viewAll {
+    margin-top: 40px;
+  }
+}

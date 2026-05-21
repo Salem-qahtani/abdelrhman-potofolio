@@ -1,0 +1,46 @@
+/* §4.7 View All Projects button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 28px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.button:hover {
+  background: var(--accent-primary-soft);
+  border-color: var(--accent-primary);
+}
+
+.button:hover .icon {
+  transform: translateX(4px);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.icon {
+  color: var(--accent-primary);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+@media (max-width: 639px) {
+  .button {
+    width: 100%;
+    max-width: 360px;
+  }
+}

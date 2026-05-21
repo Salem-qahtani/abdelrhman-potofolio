@@ -1,0 +1,88 @@
+/* §3.1 Hero section */
+.section {
+  position: relative;
+  z-index: var(--z-content);
+  padding-top: 160px;
+  padding-bottom: 128px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.cardCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.textCol {
+  min-width: 0;
+}
+
+/* §3.3.1 Two-line headline */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.titleLine1 {
+  color: var(--text-primary);
+}
+
+.titleLine2 {
+  color: var(--text-muted);
+}
+
+/* §3.3.2 Body paragraph */
+.intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 460px;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 96px;
+  }
+
+  .grid {
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding-top: 96px;
+    padding-bottom: 64px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .cardCol {
+    justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+}
