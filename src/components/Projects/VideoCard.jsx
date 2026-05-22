@@ -27,17 +27,16 @@ export default function VideoCard({
 
   return (
     <article className={styles.card}>
-      <div
-        className={[styles.thumbWrap, isPlaying && styles.playing]
-          .filter(Boolean)
-          .join(' ')}
-      >
+      <div className={[styles.thumbWrap, isPlaying && styles.playing].filter(Boolean).join(' ')}>
         <video
           ref={videoRef}
           className={styles.video}
           poster={thumbSrc}
           preload="metadata"
           playsInline
+          onLoadedMetadata={(e) => {
+            e.currentTarget.volume = 0.5;
+          }}
         >
           {videoSrcWebm && <source src={videoSrcWebm} type="video/webm" />}
           <source src={videoSrc} type="video/mp4" />

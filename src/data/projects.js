@@ -16,20 +16,20 @@ export const aeProjects = [
     title: 'Meena — Brand Story',
     description: 'Animated brand intro tracing Meena’s journey since January 2023.',
     thumbSrc: '/images/ae/1.png',
-    videoSrc: '/videos/1.mp4',
+    videoSrc: 'https://res.cloudinary.com/dk9hxqn2a/video/upload/q_auto/f_auto/v1779489380/1_dkgitn.mp4',
   },
   {
     id: 'ae2',
     title: 'Vision 2030 — Kingdom Reel',
     description: 'Cinematic title sequence celebrating Saudi Arabia’s Vision 2030.',
     thumbSrc: '/images/ae/2.png',
-    videoSrc: '/videos/2.mp4',
+    videoSrc: 'https://res.cloudinary.com/dk9hxqn2a/video/upload/q_auto/f_auto/v1779490163/2_avmpza.mp4',
   },
   {
     id: 'ae3',
     title: 'Vision 2030 — Health Sector',
     description: 'Motion piece highlighting innovation and automation in the health sector.',
     thumbSrc: '/images/ae/3.png',
-    videoSrc: '/videos/3.mp4',
+    videoSrc: 'https://res.cloudinary.com/dk9hxqn2a/video/upload/q_auto/f_auto/v1779489764/3_thkbzk.mp4',
   },
 ];

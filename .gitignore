@@ -8,6 +8,3 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 *.log
-
-# Large video assets — upload directly to the hosting provider
-public/videos/*.mp4
