@@ -14,9 +14,6 @@ export default function Footer() {
             {profile.email}
           </a>
         </Reveal>
-        <Reveal delay={160}>
-          <p className={styles.credit}>{profile.credit}</p>
-        </Reveal>
       </div>
     </footer>
   );

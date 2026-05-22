@@ -12,15 +12,15 @@ const placeholder169 = (label) =>
   )}`;
 
 export const blenderProjects = [
-  { id: 'b1', title: 'Lunar Drift', description: 'Stylized moon scene with custom shaders.', thumbSrc: placeholder43('B1') },
-  { id: 'b2', title: 'Volume Lab', description: 'Volumetric fog R&D for product reveals.', thumbSrc: placeholder43('B2') },
-  { id: 'b3', title: 'Iridescent Bloom', description: 'Procedural petals with caustic lighting.', thumbSrc: placeholder43('B3') },
-  { id: 'b4', title: 'Glass House', description: 'Architectural still with dispersion.', thumbSrc: placeholder43('B4') },
-  { id: 'b5', title: 'Studio Loop', description: 'Looping product turntable for ecommerce.', thumbSrc: placeholder43('B5') },
-  { id: 'b6', title: 'Particle Choir', description: 'Audio-reactive particle systems.', thumbSrc: placeholder43('B6') },
-  { id: 'b7', title: 'Soft Bodies', description: 'Cloth & jelly simulation studies.', thumbSrc: placeholder43('B7') },
-  { id: 'b8', title: 'Microcosm', description: 'Macro miniatures with depth of field.', thumbSrc: placeholder43('B8') },
-  { id: 'b9', title: 'Aurora Frame', description: 'Atmospheric volumetrics for a brand spot.', thumbSrc: placeholder43('B9') },
+  { id: 'b1', title: 'Sunken Voyage', description: 'Underwater shipwreck scene with god rays and coral reefs.', thumbSrc: '/images/blender/1.png' },
+  { id: 'b2', title: 'Vanille Cédrée', description: 'Cinematic perfume render for Zenogati Paris on warm dunes.', thumbSrc: '/images/blender/2.png' },
+  { id: 'b3', title: 'Valentino Studs', description: 'Valentino lipstick reveal with studded packaging and silk ribbon.', thumbSrc: '/images/blender/3.png' },
+  { id: 'b4', title: 'Crimson Cabinet', description: 'Moody fragrance still framed in deep crimson light.', thumbSrc: '/images/blender/4.png' },
+  { id: 'b5', title: 'Aesop Karst', description: 'Earthy product still with dappled shadow play.', thumbSrc: '/images/blender/5.png' },
+  { id: 'b6', title: 'Forgotten Shrine', description: 'Jungle temple ruins with volumetric sunlight and reflecting pool.', thumbSrc: '/images/blender/6.png' },
+  { id: 'b7', title: 'Chanel in Bloom', description: 'Chanel bottle nestled in a moonlit mossy garden.', thumbSrc: '/images/blender/7.png' },
+  { id: 'b8', title: 'Brass Geometry', description: 'Ceramic cup poised over a brushed brass block landscape.', thumbSrc: '/images/blender/8.png' },
+  { id: 'b9', title: 'Endgame', description: 'Cinematic chess set wrapped in smoke and warm reflections.', thumbSrc: '/images/blender/9.png' },
 ];
 
 export const aeProjects = [
@@ -29,20 +29,20 @@ export const aeProjects = [
     title: 'Brand Reveal — Kintsu',
     description: 'Logo reveal with kinetic shape morphs and grain.',
     thumbSrc: placeholder169('AE Reel 01'),
-    videoSrc: '/videos/ae1.mp4',
+    videoSrc: '/videos/1.mp4',
   },
   {
     id: 'ae2',
     title: 'Motion Reel 2025',
     description: 'A 60-second cut of recent commercial work.',
     thumbSrc: placeholder169('AE Reel 02'),
-    videoSrc: '/videos/ae2.mp4',
+    videoSrc: '/videos/2.mp4',
   },
   {
     id: 'ae3',
     title: 'Type In Motion',
     description: 'Typographic studies in expressive timing.',
     thumbSrc: placeholder169('AE Reel 03'),
-    videoSrc: '/videos/ae3.mp4',
+    videoSrc: '/videos/3.mp4',
   },
 ];

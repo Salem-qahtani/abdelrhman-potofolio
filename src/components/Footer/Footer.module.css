@@ -3,6 +3,10 @@
   position: relative;
   z-index: var(--z-content);
   background: var(--bg-page);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 120px;
   padding-bottom: 64px;
 }
@@ -40,26 +44,12 @@
 
 .email:hover {
   color: var(--accent-primary);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
 }
 
 .email:focus-visible {
   outline: none;
   box-shadow: var(--shadow-focus);
   border-radius: var(--radius-xs);
-}
-
-/* §6.4 Credit */
-.credit {
-  font-family: var(--font-mono);
-  font-size: var(--text-caption);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.4;
-  color: var(--text-tertiary);
-  margin-top: 32px;
 }
 
 @media (max-width: 1023px) {
