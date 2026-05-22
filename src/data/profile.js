@@ -3,14 +3,14 @@ import { Instagram, Linkedin } from 'lucide-react';
 export const profile = {
   name: 'Abdelrhman',
   photoSrc: '/images/profile.png',
-  bio: '3D artist & motion designer crafting cinematic visuals with Blender and After Effects.',
+  bio: 'Motion Designer, 3D Artist, and Video Editor with over 6 years of experience creating visual content using Adobe After Effects and Blender.',
   email: 'abdelrhman.alkhalil00@gmail.com',
   headline: {
-    line1: 'CREATIVE',
-    line2: 'DESIGNER',
+    line1: 'Motion Designer',
+    line2: 'Video Editor',
   },
   intro:
-    'I blend 3D worlds with motion to tell stories that feel alive. Open to commissioned work, collaborations, and brand-driven creative direction.',
+    'Creative 3D Motion Designer specializing in Blender and After Effects. Passionate about crafting cinematic visuals, product animations, and high-end motion graphics that combine strong design principles with compelling storytelling. Focused on delivering visually striking content with attention to detail, realism, and modern aesthetics.',
   socials: [
     {
       id: 'ig',

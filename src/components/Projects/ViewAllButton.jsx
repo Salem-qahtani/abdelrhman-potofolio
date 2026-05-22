@@ -1,19 +1,14 @@
 import { ArrowRight } from 'lucide-react';
 import styles from './ViewAllButton.module.css';
 
-/**
- * Placeholder external link. The `href` will eventually point to a Google
- * Drive URL; for now it's "#" so the element is keyboard-focusable and
- * styled, but doesn't navigate or scroll.
- */
 export default function ViewAllButton() {
   return (
     <a
       className={styles.button}
-      href="#"
+      href="https://drive.google.com/drive/folders/1Bk9Bx39q1RXOnrZ21z8KFyPA__3m06hf?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="View all projects"
+      aria-label="View all projects on Google Drive"
     >
       <span>View All Projects</span>
       <ArrowRight

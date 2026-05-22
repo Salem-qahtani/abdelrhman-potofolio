@@ -1,16 +1,3 @@
-// 9 Blender thumbnails (480×360 @2x) and 3 After Effects video cards (1280×720 + mp4).
-// Drop real assets into public/images/blender/, public/images/ae/, public/videos/.
-
-const placeholder43 = (label) =>
-  `data:image/svg+xml;utf8,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360"><rect width="480" height="360" fill="#222"/><text x="50%" y="50%" fill="#6E6E6E" font-family="Inter, sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle">${label}</text></svg>`,
-  )}`;
-
-const placeholder169 = (label) =>
-  `data:image/svg+xml;utf8,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="#222"/><text x="50%" y="50%" fill="#6E6E6E" font-family="Inter, sans-serif" font-size="42" text-anchor="middle" dominant-baseline="middle">${label}</text></svg>`,
-  )}`;
-
 export const blenderProjects = [
   { id: 'b1', title: 'Sunken Voyage', description: 'Underwater shipwreck scene with god rays and coral reefs.', thumbSrc: '/images/blender/1.png' },
   { id: 'b2', title: 'Vanille Cédrée', description: 'Cinematic perfume render for Zenogati Paris on warm dunes.', thumbSrc: '/images/blender/2.png' },
@@ -26,23 +13,23 @@ export const blenderProjects = [
 export const aeProjects = [
   {
     id: 'ae1',
-    title: 'Brand Reveal — Kintsu',
-    description: 'Logo reveal with kinetic shape morphs and grain.',
-    thumbSrc: placeholder169('AE Reel 01'),
+    title: 'Meena — Brand Story',
+    description: 'Animated brand intro tracing Meena’s journey since January 2023.',
+    thumbSrc: '/images/ae/1.png',
     videoSrc: '/videos/1.mp4',
   },
   {
     id: 'ae2',
-    title: 'Motion Reel 2025',
-    description: 'A 60-second cut of recent commercial work.',
-    thumbSrc: placeholder169('AE Reel 02'),
+    title: 'Vision 2030 — Kingdom Reel',
+    description: 'Cinematic title sequence celebrating Saudi Arabia’s Vision 2030.',
+    thumbSrc: '/images/ae/2.png',
     videoSrc: '/videos/2.mp4',
   },
   {
     id: 'ae3',
-    title: 'Type In Motion',
-    description: 'Typographic studies in expressive timing.',
-    thumbSrc: placeholder169('AE Reel 03'),
+    title: 'Vision 2030 — Health Sector',
+    description: 'Motion piece highlighting innovation and automation in the health sector.',
+    thumbSrc: '/images/ae/3.png',
     videoSrc: '/videos/3.mp4',
   },
 ];
