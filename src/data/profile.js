@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 export const profile = {
   name: 'Abdelrhman',
