@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * Adds an opacity/translateY reveal when the observed element scrolls into view.
- * Enters at the given threshold (default 0.15) and only leaves once the element
- * is fully out of the viewport — the hysteresis prevents flicker near the edge
- * because the reveal's own translateY can otherwise re-trigger the boundary.
- * Pass `once: true` to fire only once.
+ * Enters at `threshold` but only leaves once the element is fully out of view —
+ * the hysteresis prevents flicker near the edge because the reveal's own
+ * translateY can otherwise re-trigger the boundary.
  */
 export default function useScrollReveal({
   threshold = 0.15,
@@ -24,11 +22,10 @@ export default function useScrollReveal({
       return;
     }
 
-    const enterRatio = Array.isArray(threshold) ? Math.max(...threshold) : threshold;
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.intersectionRatio >= enterRatio) {
+          if (entry.intersectionRatio >= threshold) {
             setInView(true);
             if (once) observer.disconnect();
           } else if (!once && !entry.isIntersecting) {
@@ -36,7 +33,7 @@ export default function useScrollReveal({
           }
         }
       },
-      { threshold: [0, enterRatio], rootMargin },
+      { threshold: [0, threshold], rootMargin },
     );
 
     observer.observe(node);

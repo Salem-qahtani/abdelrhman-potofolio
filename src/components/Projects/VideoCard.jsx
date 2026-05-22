@@ -15,7 +15,11 @@ export default function VideoCard({
   onDeactivate,
 }) {
   const videoRef = useRef(null);
-  const { isPlaying } = useVideoController(videoRef, { isActive, onDeactivate });
+  const { isPlaying } = useVideoController(videoRef, {
+    isActive,
+    onDeactivate,
+    initialVolume: 0.5,
+  });
 
   const handlePlay = () => onActivate(id);
   const handlePause = () => {
@@ -34,9 +38,6 @@ export default function VideoCard({
           poster={thumbSrc}
           preload="metadata"
           playsInline
-          onLoadedMetadata={(e) => {
-            e.currentTarget.volume = 0.5;
-          }}
         >
           {videoSrcWebm && <source src={videoSrcWebm} type="video/webm" />}
           <source src={videoSrc} type="video/mp4" />

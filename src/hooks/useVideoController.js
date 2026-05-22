@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react';
 
-/**
- * Imperative play/pause bridge for a single <video> element.
- * - When `isActive` flips true, calls play(); on autoplay-block, calls onDeactivate.
- * - When `isActive` flips false, calls pause().
- * - Mirrors the element's real playback into `isPlaying` via play/pause/ended events.
- * - On `ended`, calls onDeactivate so the parent clears its active id.
- */
-export default function useVideoController(videoRef, { isActive, onDeactivate }) {
+export default function useVideoController(
+  videoRef,
+  { isActive, onDeactivate, initialVolume },
+) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -20,16 +16,22 @@ export default function useVideoController(videoRef, { isActive, onDeactivate })
       setIsPlaying(false);
       onDeactivate?.();
     };
+    const applyVolume = () => {
+      if (initialVolume != null) video.volume = initialVolume;
+    };
 
     video.addEventListener('play', onPlay);
     video.addEventListener('pause', onPause);
     video.addEventListener('ended', onEnded);
+    video.addEventListener('loadedmetadata', applyVolume);
+    if (video.readyState >= 1) applyVolume();
     return () => {
       video.removeEventListener('play', onPlay);
       video.removeEventListener('pause', onPause);
       video.removeEventListener('ended', onEnded);
+      video.removeEventListener('loadedmetadata', applyVolume);
     };
-  }, [videoRef, onDeactivate]);
+  }, [videoRef, onDeactivate, initialVolume]);
 
   useEffect(() => {
     const video = videoRef.current;
