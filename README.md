@@ -6,7 +6,7 @@ A single-page portfolio site designed and built for **Abdulrahman Al‑Khalil**,
 
 ## Live demo
 
-_(Add deployed URL here)_
+_https://abdelrhman-potofolio.netlify.app/_
 
 ## Tech stack
 
