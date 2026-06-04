@@ -10,7 +10,6 @@ export default function Hero() {
         <Reveal className={styles.cardCol}>
           <ProfileCard
             name={profile.name}
-            photoSrc={profile.photoSrc}
             bio={profile.bio}
             socials={profile.socials}
           />

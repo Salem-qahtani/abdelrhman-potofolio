@@ -4,7 +4,7 @@ export const profile = {
   name: 'Abdelrhman',
   photoSrc: '/images/profile.png',
   bio: 'Motion Designer, 3D Artist, and Video Editor with over 6 years of experience creating visual content using Adobe After Effects and Blender.',
-  email: 'abdelrhman.alkhalil00@gmail.com',
+  email: 'abdelrahman.alkhalil00@gmail.com',
   headline: {
     line1: 'Motion Designer',
     line2: 'Video Editor',
